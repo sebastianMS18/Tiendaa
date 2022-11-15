@@ -1,0 +1,80 @@
+body {
+    font-family: 'Rajdhani', sans-serif;
+}
+
+/* Menu
+
+*/
+.menu-ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #A7A5A5;
+}
+
+.menu-li{
+    float: left;
+}
+
+.menu-li a {
+    display: block;
+    color: #5E5D5D;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu-li a :hover {
+    background-color: #EAE6E4;
+}
+/*Imagen de la pagina Inicio
+*/
+.contenedor-img {
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+}
+.centrado {
+    position: absolute;
+    top: 1%;
+    left: 50%;
+    background-color: aquamarine;
+    transform: translate(-50%, 50%);
+    opacity: 0.3;
+}
+.p-img {
+    font-size: 4rem;
+    color: black;
+}
+
+/* equipos */
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+    /*Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+/* On mouse.over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+    padding: 2px 16px;
+}
+.box1 {
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+
+.fondos-contacto {
+    background: rgb(227,235,236);
+    background: linear-gradient(126deg, rgba(227,235,236,1) 35%, rgba(227,235,236,1) 100%);
+}

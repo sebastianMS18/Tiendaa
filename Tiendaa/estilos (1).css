@@ -1,0 +1,171 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Menu 
+
+*/
+ 
+ .menu-ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2F5DBC;
+  }
+  
+  .menu-li {
+    float: left;
+  }
+  
+  .menu-li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .menu-li a:hover {
+    background-color: #629ADE;
+  }
+  
+/* Imagen de la pagina Inicio
+*/
+  .contenedor-img {
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+  }
+  .centrado {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    background-color: #629ADE;
+    opacity: 0.3;
+  }
+  .p-img {
+    font-size: 4rem;
+    color: black;
+  }
+
+  /* equipos */
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  /* Add some padding inside the card container */
+  .container {
+    padding: 2px 16px;
+  }
+
+  /* Fondo contactos */
+  
+  .fondo-contactos {
+    background: rgb(98,154,222);
+    background: linear-gradient(113deg, rgba(98,154,222,1) 26%, rgba(0,212,255,1) 100%); 
+    gap: 10px;
+  }
+
+/* Popup de equipos 
+clase overlay que hará el efecto modal. El truco consiste en poner fija la posición de la capa 
+y sus 4 direcciones en 0. La propiedad visibility estará en hidden. La opacidad será 0 inicialmente, 
+haciendo una simple transición de medio segundo.
+*/
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+/*
+la pseudo clase target que funciona cuando un elemento está activo, como en este caso la clase overlay. 
+Lo que haremos será simplemente poner la propiedad visibility en visible, y regresar la opacidad en 1.
+*/
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+#popupBody{
+  width: 46%;
+  padding: 2%;
+  border-radius: 15px;
+  box-shadow: 0 0 5px #CCC;
+  background: #FFF;
+  position: relative;
+  transition: all 5s ease-in-out;
+  margin: 20% auto;    
+}
+#popupBody2{
+  width: 46%;
+  padding: 2%;
+  border-radius: 15px;
+  box-shadow: 0 0 5px #CCC;
+  background: #FFF;
+  position: relative;
+  transition: all 5s ease-in-out;
+  margin: 20% auto;    
+}
+#cerrar{
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #F00;
+}
+
+/* Juegos */
+.wrapper-juegos {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  gap: 0;
+  padding-top: 150px;
+  transform-origin: 0 0;
+  transform: skewY(-8deg);
+}
+
+/* hover juegos */
+
+.tooltip {
+  position: static;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 30%;
+  background-color: #2F5DBC;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  /* posicion de tooltip*/
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
